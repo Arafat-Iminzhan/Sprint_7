@@ -4,8 +4,12 @@ from const import MessageText, Const
 
 
 class TestGetOrderList:
+
     @allure.title('Проверка получения списка заказа')
     def test_get_order_list(self):
-        response = requests.get(Const.ORDER_LIST)
-        assert response.status_code == 200
-        assert MessageText.LIST_ORDERS in response.text
+        with allure.step("Отправка запроса на получение списка заказов"):
+            response = requests.get(Const.ORDER_LIST)
+
+        with allure.step("Проверка, что список заказов получен"):
+            assert response.status_code == 200
+            assert MessageText.LIST_ORDERS in response.text

@@ -1,0 +1,30 @@
+# 🐍 Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.env
+*.venv
+env/
+venv/
+ENV/
+
+# 🚫 IDE-шный мусор (PyCharm)
+.idea/
+*.iml
+
+# 📦 Пакеты
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# 🧪 Allure
+target/
+allure-report/
+allure-results/
+
+# 🗂 Системные файлы
+.DS_Store
+Thumbs.db
